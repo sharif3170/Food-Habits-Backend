@@ -15,15 +15,9 @@ const app = express();
 // =======================
 // 📌 CORS Configuration
 // =======================
-const corsOptions = {
-  origin: process.env.FRONTEND_URL || "https://food-habits.vercel.app/",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
-  credentials: true,
-  optionsSuccessStatus: 200
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 
 // =======================
